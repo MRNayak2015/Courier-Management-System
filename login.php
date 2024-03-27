@@ -73,7 +73,12 @@ include('./db_connect.php');
   }
 }
 .left-footer{
-  margin-top: 130px;
+  margin-top: 175px;
+}
+.speaker-icon {
+  font-size: 15px;
+  cursor: pointer; /* Add this line to set cursor to pointer */
+  margin-left: 100px;
 }
     </style>
 </head>
@@ -87,9 +92,11 @@ header("location:index.php?page=home");
 <marquee direction="left" behavior="alternate" scrollamount=3 >
    <h3 style="color:orange"><b>Efficiency in Motion, Excellence in Delivery: Your Trusted Courier Management Partner</b></h3>
 </marquee>
- <div class="double-lines">
-<h1 class="animate-charcter" align='center' <strong>VelocityCargo Couriers</strong></h1>
-      </div>
+<div class="double-lines">
+    <h1 class="animate-charcter" style="display: inline-block;" align='center'><strong>VelocityCargo Couriers</strong></h1>
+    <h2 class="speaker-icon" style="display: inline-block; margin-left: 10px; cursor: pointer; font-size: 25px;" onclick="speakName()">🔊</h2>
+</div>
+
 <div class="login-box">
   <div class="login-logo">
   <a href="#" style="color:Black;"><b><?php echo $_SESSION['system']['name'] ?> - Login</b></a>
@@ -148,6 +155,10 @@ header("location:index.php?page=home");
   </div>
 <!-- /.login-box -->
 <script>
+  function speakName() {
+  var utterance = new SpeechSynthesisUtterance('Velocity Cargo Couriers');
+  speechSynthesis.speak(utterance);
+}
   $(document).ready(function(){
     $('#login-form').submit(function(e){
     e.preventDefault()
