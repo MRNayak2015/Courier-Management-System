@@ -64,7 +64,7 @@ include('./db_connect.php');
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
   display: inline-block;
-      font-size: 70px;
+      font-size: 80px;
 }
 
 @keyframes textclip {
@@ -72,14 +72,7 @@ include('./db_connect.php');
     background-position: 200% center;
   }
 }
-.left-footer{
-  margin-top: 175px;
-}
-.speaker-icon {
-  font-size: 15px;
-  cursor: pointer; /* Add this line to set cursor to pointer */
-  margin-left: 100px;
-}
+
     </style>
 </head>
 <?php 
@@ -90,11 +83,11 @@ header("location:index.php?page=home");
 <?php include 'header.php' ?>
 <body class="hold-transition login-page">
 <marquee direction="left" behavior="alternate" scrollamount=3 >
-   <h3 style="color:orange"><b>Efficiency in Motion, Excellence in Delivery: Your Trusted Courier Management Partner</b></h3>
+   <h2 style="color:orange"><b>Efficiency in Motion, Excellence in Delivery: Your Trusted Courier Management Partner</b></h2>
 </marquee>
 <div class="double-lines">
-    <h1 class="animate-charcter" style="display: inline-block;" align='center'><strong>VelocityCargo Couriers</strong></h1>
-    <h2 class="speaker-icon" style="display: inline-block; margin-left: 10px; cursor: pointer; font-size: 25px;" onclick="speakName()">🔊</h2>
+    <h1 class="animate-charcter"<strong>VelocityCargo Couriers</strong></h1>
+    <h2 class="speaker-icon" style="display: inline-block; margin-left: 10px; cursor: pointer; font-size: 30px;" onclick="speakName()">🔊</h2>
 </div>
 
 <div class="login-box">
@@ -195,12 +188,6 @@ header("location:index.php?page=home");
   <!-- /.control-sidebar -->
 
   <!-- Main Footer -->
-  <p> 
-
-<!-- for space from form body -->
-
-
-</p>
   <footer class="left-footer">
     <strong>Copyright &copy; 2024 <a href="https://github.com/Pranab-0312" target="_blank">Developer</a>.</strong>
     All rights reserved.
