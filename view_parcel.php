@@ -132,6 +132,7 @@ $branch = array();
 	</div>
 </div>
 <div class="modal-footer display p-0 m-0">
+<button type="button" class="btn btn-success float-left" id="print"><i class="fa fa-print"></i> Print</button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 </div>
 <style>
@@ -142,23 +143,25 @@ $branch = array();
 		display: flex
 	}
 </style>
-<noscript>
-	<style>
-		table.table{
-			width:100%;
-			border-collapse: collapse;
-		}
-		table.table tr,table.table th, table.table td{
-			border:1px solid;
-		}
-		.text-cnter{
-			text-align: center;
-		}
-	</style>
-	<h3 class="text-center"><b>Student Result</b></h3>
-</noscript>
+
+
 <script>
 	$('#update_status').click(function(){
 		uni_modal("Update Status of: <?php echo $reference_number ?>","manage_parcel_status.php?id=<?php echo $id ?>&cs=<?php echo $status ?>","")
+	})
+</script>
+<script>
+$('#print').click(function(){
+		var ns = $('noscript').clone()
+		ns.append(content)
+		var nw = window.open('','','height=700,width=900')
+		nw.document.write(ns.html())
+		nw.document.close()
+		nw.print()
+		setTimeout(function(){
+			nw.close()
+			end_load()
+		},750)
+
 	})
 </script>

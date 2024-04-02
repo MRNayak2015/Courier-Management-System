@@ -116,6 +116,7 @@
 		$('#list').dataTable()
 		$('.view_parcel').click(function(){
 			uni_modal("Parcel's Details","view_parcel.php?id="+$(this).attr('data-id'),"large")
+			
 		})
 	$('.delete_parcel').click(function(){
 	_conf("Are you sure to delete this parcel?","delete_parcel",[$(this).attr('data-id')])
